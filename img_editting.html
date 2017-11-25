@@ -1,0 +1,308 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Image Editting</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        @font-face{
+            font-family:baram;
+            src:url(font/Baram.ttf)
+        }
+        
+        body{
+            
+            background-color: #f5f5f5;
+        }
+        
+        h3{
+            font-size: 14px;
+        }
+        
+        #wrap{
+            width: 960px;
+            height: 1400px;
+            margin: 40px auto;
+            box-shadow: 1px 1px 4px 0px #666;
+            display: none;
+            position: relative;
+            background-color: #fff;
+        }
+        .title{
+            font-weight: normal;
+            font-size: 50px;
+            background-color: white;
+            width: 430px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            position: absolute;
+            top: 80px;;left: 50%;
+            transform: translate(-200px,-50px);
+            background-color: transparent;
+            text-shadow: 0px 1px 1px rgba(255,255,255,1);
+            color: #333;
+            font-family: georgia;
+            display: none;
+        }
+        
+        #contents{
+            margin: 0px auto;
+            top: 150px;
+            height: 800px;
+            position: relative;
+            width: 900px;
+        }
+        .box{
+            width: 300px;
+            height: 400px;
+            float: left;
+            display: inline-block;
+            background-color: transparent;
+            position: relative;
+        }
+        
+        .page{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            box-shadow: 0.5px 1px 2px 0px #000000;
+            transform: translate(-100px,0px);
+            top: 20px; left: 50%;
+            position: absolute;
+            cursor: pointer;
+            border-radius: 250px;
+            overflow: hidden;
+            display: none;
+        }
+        .page>img{
+            width: 100%;
+        }
+        .description{
+            width: 200px;
+            height: 80px;
+            transform: translate(-100px,0px);
+            position: absolute;
+            top: 250px; left: 50%;
+            color:#444;
+            font-size: 11px;
+            text-align: center;
+            display: none;
+            box-shadow: 0.5px 1px 2px 0px #aaa;
+            background-color: #fcfcfc;
+            border-radius: 3px;
+            padding-left: 20px;
+        }
+        .description>p{
+            margin-top: 10px;
+        }
+        
+        .description>h3{
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .pin{
+            background-color: #f26365;
+            width: 15px; height: 15px;
+            border-radius: 20px;
+            position: absolute;
+            top: 5px;left: 5px;
+            box-shadow: 2px 2px 3px 0px #666;
+        }
+        .green{
+            background-color: #4bbc88;
+        }
+        .blue{
+            background-color: #4bbbeb;
+        }
+        
+    </style>
+</head>
+    <body>
+        <div id="wrap">
+            <h1 class="title">Image Editting</h1>
+            <div id="contents">
+                <div class="box first">
+                    <div class="page">
+                        <img src="img/cibi.jpg" alt="logo_making">
+                    </div>
+                    <div class="description">
+                        <div class="pin green"></div>
+                        <h3>Branding Identity<br>(Illustrator)</h3>
+                        <p>편의점 아이덴티티를 제작</p>
+                    </div>
+                </div>
+                <div class="box second">
+                    <div class="page">
+                        
+                        <img src="img/switch.jpg" alt="switch">
+                    </div>
+                    <div class="description">
+                        <div class="pin blue"></div>
+                        <h3>Switch<br>(UI/UX)</h3>
+                        <p>실제와 비슷한 토글 버튼</p>
+                    </div>
+                </div>
+                <div class="box third">
+                    <div class="page">
+                        <img src="img/menu_bar.jpg" alt="menu_bar">
+                    </div>
+                    <div class="description">
+                        <div class="pin red"></div>
+                        <h3>Menu Bar<br>(UI/UX)</h3>
+                        <p>플랫 디자인에<br> 약간의 입체감을 살린 메뉴바</p>
+                    </div>
+                </div>
+                <div class="box forth">
+                    <div class="page">
+                        <img src="img/player_control.jpg" alt="player_control">
+                    </div>
+                    <div class="description">
+                        <div class="pin green"></div>
+                        <h3>Controller<br>(UI/UX)</h3>
+                        <p>플레이어 컨트롤러</p>
+                    </div>
+                </div>
+                <div class="box fifth">
+                    <div class="page">
+                        <img src="img/world_clock.jpg" alt="clock">
+                    </div>
+                    <div class="description">
+                        <div class="pin"></div>
+                        <h3>Clock<br>(UI/UX)</h3>
+                        <p>어플리케이션에 내장된 시계</p>
+                    </div>
+                </div>
+                <div class="box fifth">
+                    <div class="page">
+                        <img src="img/mapLoading.jpg" alt="map_loading">
+                    </div>
+                    <div class="description">
+                        <div class="pin blue"></div>
+                        <h3>Map<br>(UI/UX)</h3>
+                        <p>프로그레스바를 띄우는 지도</p>
+                    </div>
+                </div>
+                <div class="box fifth">
+                    <div class="page">
+                        
+                        <img src="img/bus_card_app_icon.jpg" alt="bus_card_app_icon">
+                    </div>
+                    <div class="description">
+                        <div class="pin blue"></div>
+                        <h3>Bus Card App<br>(UI/UX)</h3>
+                        <p>버스 카드 리더기를 <br>어플리케이션으로</p>
+                    </div>
+                </div>
+                <div class="box fifth">
+                    <div class="page">
+                        <img src="img/game_button.jpg" alt="button">
+                    </div>
+                    <div class="description">
+                        <div class="pin"></div>
+                        <h3>Button<br>(UI/UX)</h3>
+                        <p>조이스틱의 버튼</p>
+                    </div>
+                </div>
+                <div class="box fifth">
+                    <div class="page">
+                        <img src="img/speaker_app.jpg" alt="speaker_app">
+                    </div>
+                    <div class="description">
+                        <div class="pin green"></div>
+                        <h3>Speaker<br>(UI/UX)</h3>
+                        <p>스피커의 질감을 따라해 본 아이콘</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var wrap = $("#wrap");
+        var page= $(".page");
+        var description=$(".description");
+        var title=$(".title");
+        
+        wrap.fadeIn(200);
+        setTimeout(function(){
+           page.fadeIn(200);
+            setTimeout(function(){
+                description.fadeIn(200);
+                title.fadeIn(200);
+            },100);
+        },100);
+        
+        page.on("click",function(){
+                description.fadeOut(200);
+                title.fadeOut(200);
+            setTimeout(function(){
+                    wrap.fadeOut(200);
+            },100);
+        });
+        
+        
+        
+        page.eq(0).on("click",function(){
+           
+            setInterval(function(){location.href="img_editting/cibi.html"; },250);
+           
+        });
+        
+        page.eq(1).on("click",function(){
+           
+            setInterval(function(){location.href="img_editting/switch.html"; },250);
+           
+        });
+        
+        page.eq(2).on("click",function(){
+           
+            setInterval(function(){location.href="img_editting/menu_bar.html"; },250);
+           
+        });
+        
+        
+        page.eq(3).on("click",function(){
+           
+            setInterval(function(){location.href="img_editting/player_control.html"; },250);
+           
+        });
+        
+        page.eq(4).on("click",function(){
+           
+            setInterval(function(){location.href="img_editting/world_clock.html"; },250);
+           
+        });
+         page.eq(5).on("click",function(){
+           
+            setInterval(function(){location.href="img_editting/MapLoading.html"; },250);
+           
+        });
+        
+        page.eq(6).on("click",function(){
+           
+            setInterval(function(){location.href="img_editting/bus_card_app_icon.html"; },250);
+           
+        });
+        
+        
+        page.eq(7).on("click",function(){
+           
+            setInterval(function(){location.href="img_editting/game_button.html"; },250);
+           
+        });
+        
+        page.eq(8).on("click",function(){
+           
+            setInterval(function(){location.href="img_editting/speaker_app.html"; },250);
+           
+        });
+        
+    </script>
+</html>
