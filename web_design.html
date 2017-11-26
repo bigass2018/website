@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Web Design</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body{
+            
+            background-color: #f5f5f5;
+        }
+        
+        h3{
+            font-size: 14px;
+        }
+        
+        #wrap{
+            width: 960px;
+            height: 940px;
+            margin: 40px auto;
+            box-shadow: 1px 1px 4px 0px #666;
+            display: none;
+            position: relative;
+            background-color: #fff;
+        }
+        .title{
+            font-weight: normal;
+            font-size: 50px;
+            background-color: white;
+            width: 330px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            position: absolute;
+            top: 80px;;left: 50%;
+            transform: translate(-165px,-50px);
+            background-color: transparent;
+            text-shadow: 0px 1px 1px rgba(255,255,255,1);
+            color: #333;
+            font-family: georgia;
+            display: none;
+        }
+        
+        #contents{
+            margin: 0px auto;
+            top: 150px;
+            height: 800px;
+            position: relative;
+            width: 900px;
+        }
+        .box{
+            width: 300px;
+            height: 400px;
+            float: left;
+            display: inline-block;
+            background-color: transparent;
+            position: relative;
+        }
+        
+        .forth{
+            margin-left: 150px;
+        }
+        
+        .page{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            box-shadow: 0.5px 1px 2px 0px #000000;
+            transform: translate(-100px,0px);
+            top: 20px; left: 50%;
+            position: absolute;
+            cursor: pointer;
+            border-radius: 250px;
+            overflow: hidden;
+            display: none;
+        }
+        .page>img{
+            width: 100%;
+        }
+        .description{
+            width: 200px;
+            height: 80px;
+            transform: translate(-100px,0px);
+            position: absolute;
+            top: 250px; left: 50%;
+            color:#444;
+            font-size: 11px;
+            text-align: center;
+            display: none;
+            box-shadow: 0.5px 1px 2px 0px #aaa;
+            background-color: #fcfcfc;
+            border-radius: 3px;
+            padding-left: 20px;
+        }
+        .description>p{
+            margin-top: 10px;
+        }
+        
+        .description>h3{
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .pin{
+            background-color: #f26365;
+            width: 15px; height: 15px;
+            border-radius: 20px;
+            position: absolute;
+            top: 5px;left: 5px;
+            box-shadow: 2px 2px 3px 0px #666;
+        }
+         .green{
+            background-color: #4bbc88;
+        }
+        .blue{
+            background-color: #4bbbeb;
+        }
+        
+    </style>
+</head>
+    <body>
+        <div id="wrap">
+            <h1 class="title">Web Design</h1>
+            <div id="contents">
+                <div class="box first">
+                    <div class="page">
+                        <img src="img/samsung.jpg" alt="samsung_copy">
+                    </div>
+                    <div class="description">
+                        <div class="pin blue"></div>
+                        <h3>Samsung<br>(Copy,responsive)</h3>
+                        <p>가장 정성을 많이 쏟았던 만큼<br> 배운 것도 많았던 반응형 페이지</p>
+                    </div>
+                </div>
+                <div class="box second">
+                    <div class="page">
+                        <img src="img/seoul_b.jpg" alt="seoul_renewal_blue">
+                    </div>
+                    <div class="description">
+                        <div class="pin green"></div>
+                        <h3>Seoul City Homepage<br> Blue(Renewal)</h3>
+                        <p>처음으로 만들어본 홈 페이지</p>
+                    </div>
+                </div>
+                <div class="box third">
+                    <div class="page">
+                        <img src="img/seoul_r.jpg" alt="seoul_renewal_blue">
+                    </div>
+                    <div class="description">
+                        <div class="pin"></div>
+                        <h3>Seoul City Homepage<br> Red(Renewal)</h3>
+                        <p>빨간 색 배치로<br> 옆의 작품과 차별점을 둔 페이지</p>
+                    </div>
+                </div>
+                <div class="box forth">
+                    <div class="page">
+                        <img src="img/yogiyo.jpg" alt="yogiyo_copy">
+                    </div>
+                    <div class="description">
+                        <div class="pin"></div>
+                        <h3>Yogiyo<br>(Copy,responsive)</h3>
+                        <p>처음으로 만들어본 반응형 페이지</p>
+                    </div>
+                </div>
+                <div class="box fifth">
+                    <div class="page">
+                        <img src="img/tasha.jpg" alt="tasha_renewal">
+                    </div>
+                    <div class="description">
+                        <div class="pin green"></div>
+                        <h3>Tasha<br>(My own work)</h3>
+                        <p>이미지를 제외한 모든 기획을<br> 처음 해본 페이지</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var wrap = $("#wrap");
+        var page= $(".page");
+        var description=$(".description");
+        var title=$(".title");
+        
+        wrap.fadeIn(200);
+        setTimeout(function(){
+           page.fadeIn(200);
+            setTimeout(function(){
+                description.fadeIn(200);
+                title.fadeIn(200);
+            },100);
+        },100);
+        
+        page.on("click",function(){
+                description.fadeOut(200);
+                title.fadeOut(200);
+            setTimeout(function(){
+                    wrap.fadeOut(200);
+            },100);
+        });
+        
+        page.eq(0).on("click",function(){
+           
+            setTimeout(function(){location.href="web_design/samsung/index.html"; },250);
+           
+        });
+        
+        page.eq(1).on("click",function(){
+           
+            setTimeout(function(){location.href="web_design/seoul/index.html"; },250);
+           
+        });
+        
+        page.eq(2).on("click",function(){
+           
+            setTimeout(function(){location.href="web_design/seoul(new)/index.html"; },250);
+           
+        });
+        
+        
+        page.eq(3).on("click",function(){
+           
+            setTimeout(function(){location.href="web_design/yogiyo/index.html"; },250);
+           
+        });
+        
+        page.eq(4).on("click",function(){
+           
+            setTimeout(function(){location.href="web_design/Tasha/index.html"; },250);
+           
+        });
+        
+    </script>
+</html>
