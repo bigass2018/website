@@ -1211,6 +1211,8 @@
             }).on("mouseout",function(){
                     tooltip.css("display","none");
                 });
+                
+                $(window).scroll(function(){ tooltip.css("display","none");});
             
             circle.on("mousemove",function(e){
                      tooltip.css("display","block");
