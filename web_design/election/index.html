@@ -1203,14 +1203,14 @@
             
                 path.on("mousemove",function(e){
                      tooltip.css("display","block");
-                 tooltip.css("left",e.pageX-150+"px").css("top",e.pageY+25+"px");
+                 tooltip.css("left",e.clientX-150+"px").css("top",e.clientY+25+"px");
             }).on("mouseout",function(){
                     tooltip.css("display","none");
                 });
             
             circle.on("mousemove",function(e){
                      tooltip.css("display","block");
-                 tooltip.css("left",e.pageX-150+"px").css("top",e.pageY+25+"px");
+                 tooltip.css("left",e.clientX-150+"px").css("top",e.clientY+25+"px");
             }).on("mouseout",function(){
                     tooltip.css("display","none");
                 });
