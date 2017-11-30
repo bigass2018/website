@@ -1201,6 +1201,10 @@
             var AK=$("#AK");
             var t_AK=$("#t_AK");
             
+                
+            
+            var winWidth=window.innerWidth;
+            if(winWidth>=520){
                 path.on("mousemove",function(e){
                      tooltip.css("display","block");
                  tooltip.css("left",e.clientX-150+"px").css("top",e.clientY+25+"px");
@@ -1214,7 +1218,7 @@
             }).on("mouseout",function(){
                     tooltip.css("display","none");
                 });
-            
+            }
             
             
             
