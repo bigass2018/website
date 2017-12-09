@@ -486,7 +486,7 @@ font-size: 1.2em;
     position: absolute;
     top: 0;
     right: 120px;
-    width: 180px;
+    width: 165px;
     height: 100%;
     line-height: 63px;
     font-size:0.8em;
@@ -517,6 +517,7 @@ font-size: 1.2em;
     padding-right: 15px;
     height: 64px;
     z-index: 1010;
+    display: inline-block;
 }
 
 .info2>a {
