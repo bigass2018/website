@@ -501,6 +501,7 @@ font-size: 1.2em;
     padding-right: 15px;
     height: 64px;
     z-index: 1010;
+    border: 1px solid red;
 }
 
 .info1>a {
@@ -517,6 +518,7 @@ font-size: 1.2em;
     height: 64px;
     z-index: 1010;
     display: inline-block;
+    border: 1px solid red;
 }
 
 .info2>a {
@@ -533,6 +535,7 @@ font-size: 1.2em;
     z-index: 1010;
     display: inline-block;
     width: 20px;
+    border: 1px solid red;
 }
 
 .info3>a{
