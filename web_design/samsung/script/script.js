@@ -192,12 +192,15 @@ $(function(){
      /*------------------스크롤---------------------*/
     var id_scroll_btn=$("#scroll_btn");
     
-     $(".back_to_top,#scroll_btn").on("click",function(){
+     $("#scroll_btn").on("click",function(){
        $("html").animate({scrollTop:0},1000);
         
     });
     
-    
+    $(".back_to_top").on("click",function(){
+       $("html").animate({scrollTop:0},1000);
+        
+    });
     
     
     var winWidth=window.innerWidth;
