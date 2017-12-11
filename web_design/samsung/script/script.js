@@ -193,7 +193,7 @@ $(function(){
     var id_scroll_btn=$("#scroll_btn");
     
      $(".back_to_top,#scroll_btn").on("click",function(){
-       $("html").animate({scrollTop:0},1000);
+       $("html, body").animate({scrollTop:0},1000);
         
     });
     
