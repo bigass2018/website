@@ -229,33 +229,34 @@
     </body>
     <script>
         
-        window.onpageshow = function (event) {
-            if (event.persisted) {
-              wrap.fadeIn(200);
-        setTimeout(function(){
-           page.fadeIn(200);
-            setTimeout(function(){
-                description.fadeIn(200);
-                title.fadeIn(200);
-            },100);
-        },100);
-            }
-        }
-        
         
         var wrap = $("#wrap");
         var page= $(".page");
         var description=$(".description");
         var title=$(".title");
         
-        wrap.fadeIn(200);
-        setTimeout(function(){
+        window.onpageshow = function (event) {
+            if (event.persisted) {
+              start();
+            }
+        }
+        
+        
+        
+        function start(){
+            wrap.fadeIn(200);
+            setTimeout(function(){
            page.fadeIn(200);
             setTimeout(function(){
                 description.fadeIn(200);
                 title.fadeIn(200);
             },100);
         },100);
+        }
+        start();
+        
+        
+        
         
         page.on("click",function(){
                 description.fadeOut(200);

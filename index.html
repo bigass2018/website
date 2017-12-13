@@ -124,20 +124,7 @@
 
     <script>
         
-            window.onpageshow = function (event) {
-            if (event.persisted) {
-               web.fadeIn(200);
-            painting.fadeIn(200);
-            
-            setTimeout(function(){
-                h1.fadeIn(400);
-                p.fadeIn(400);
-                img.fadeIn(400);
-            },100);
-            }
-        }
-        
-            var body=$("body");
+        var body=$("body");
             var web=$("#web");
             var painting=$("#painting");
             var h1=$("h1");
@@ -145,6 +132,14 @@
             var img=$("img");
         
         
+            window.onpageshow = function (event) {
+            if (event.persisted) {
+               start();
+            }
+        }
+        
+        
+        function start(){
             web.fadeIn(200);
             painting.fadeIn(200);
             
@@ -153,6 +148,9 @@
                 p.fadeIn(400);
                 img.fadeIn(400);
             },100);
+        }
+            
+        start();
         
        
         
