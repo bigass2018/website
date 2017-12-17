@@ -102,12 +102,12 @@ $(function(){
        dot_info3_box_back.css("display","block"); 
     });
     
-    $(".cross").on("click",function(){
+    $(".cross").on("click touchend",function(){
         dot_info3_box.css("display","none");
         dot_info3_box_back.css("display","none"); 
     });
     
-    dot_info3_box_back.on("click",function(){
+    dot_info3_box_back.on("click touchend",function(){
         dot_info3_box.css("display","none"); 
         $(this).css("display","none");
     });
@@ -117,7 +117,7 @@ $(function(){
         dot_info3_box_back.css("display","none"); 
     });
     
-    $(".hamburger").on("click",function(){
+    $(".hamburger").on("click touchend",function(){
         dot_info3_box.css("display","none"); 
         dot_info3_box_back.css("display","none"); 
     });
