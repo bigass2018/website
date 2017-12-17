@@ -95,32 +95,37 @@ $(function(){
     
     var dot_info3=$(".info3");
     var dot_info3_box=$(".info3_box");
+    var dot_info3_box_input=$(".info3_box>input");
     var dot_info3_box_back=$(".info3_box_back");
     
     dot_info3.on("click touchend",function(){
        dot_info3_box.css("display","block");
        dot_info3_box_back.css("display","block"); 
-        $(".info3_box>input").trigger("focus");
+        dot_info3_box_input.trigger("focus");
     });
     
     $(".cross").on("click touchend",function(){
         dot_info3_box.css("display","none");
         dot_info3_box_back.css("display","none"); 
+        dot_info3_box_input.trigger("blur");
     });
     
     dot_info3_box_back.on("click touchend",function(){
         dot_info3_box.css("display","none"); 
         $(this).css("display","none");
+        dot_info3_box_input.trigger("blur");
     });
     
     $(".nav>li").on("mouseover",function(){
         dot_info3_box.css("display","none"); 
         dot_info3_box_back.css("display","none"); 
+        dot_info3_box_input.trigger("blur");
     });
     
     $(".hamburger").on("click touchend",function(){
         dot_info3_box.css("display","none"); 
         dot_info3_box_back.css("display","none"); 
+        dot_info3_box_input.trigger("blur");
     });
     
     
