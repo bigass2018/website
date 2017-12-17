@@ -97,7 +97,7 @@ $(function(){
     var dot_info3_box=$(".info3_box");
     var dot_info3_box_back=$(".info3_box_back");
     
-    dot_info3.on("click",function(){
+    dot_info3.on("click touchend",function(){
        dot_info3_box.css("display","block");
        dot_info3_box_back.css("display","block"); 
     });
