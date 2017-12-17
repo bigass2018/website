@@ -166,7 +166,7 @@ $(function(){
         
     });
     
-    id_modal.on("click",function(){
+    id_modal.on("click touchend",function(){
         dot_h_menu.fadeOut(100);
         id_modal.fadeOut(100);
          dot_hs.css("display","block");
