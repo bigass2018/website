@@ -100,6 +100,7 @@ $(function(){
     dot_info3.on("click touchend",function(){
        dot_info3_box.css("display","block");
        dot_info3_box_back.css("display","block"); 
+        $(".info3_box>input").trigger("focus");
     });
     
     $(".cross").on("click touchend",function(){
