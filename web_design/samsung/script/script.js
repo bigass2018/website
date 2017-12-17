@@ -177,7 +177,7 @@ $(function(){
     var dot_hamburger_icon_k=$(".hamburger_icon_k");
     var dot_hamburger_icon_b=$(".hamburger_icon_b");
         /*---------------------*/
-            dot_hamburger_a.on("mouseover touchend",function(){
+            dot_hamburger_a.on("mouseover",function(){
                  dot_hamburger_icon_k.css("display","none");
                 dot_hamburger_icon_b.css("display","block");
             });
