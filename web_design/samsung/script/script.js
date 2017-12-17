@@ -190,12 +190,12 @@ $(function(){
     
     
     
-    $(".h_menu>li>a").on("click",function(){
+    $(".h_menu>li>a").on("click touchend",function(){
         $(this).css("display","none");
        $(this).parent().siblings().css("display","none");
         $(this).siblings().css("display","block");
         
-        $(this).siblings().eq(0).children().eq(0).on("click",function(){
+        $(this).siblings().eq(0).children().eq(0).on("click touchend",function(){
            $(this).parent().css("display","none");
          $(this).parent().siblings().css("display","block");
          $(".h_menu>li").css("display","block");
