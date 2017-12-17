@@ -107,25 +107,25 @@ $(function(){
     $(".cross").on("click touchend",function(){
         dot_info3_box.css("display","none");
         dot_info3_box_back.css("display","none"); 
-        dot_info3_box_input.trigger("blur");
+        dot_info3_box_input.blur();
     });
     
     dot_info3_box_back.on("click touchend",function(){
         dot_info3_box.css("display","none"); 
         $(this).css("display","none");
-        dot_info3_box_input.trigger("blur");
+        dot_info3_box_input.blur();
     });
     
     $(".nav>li").on("mouseover",function(){
         dot_info3_box.css("display","none"); 
         dot_info3_box_back.css("display","none"); 
-        dot_info3_box_input.trigger("blur");
+        dot_info3_box_input.blur();
     });
     
     $(".hamburger").on("click touchend",function(){
         dot_info3_box.css("display","none"); 
         dot_info3_box_back.css("display","none"); 
-        dot_info3_box_input.trigger("blur");
+        dot_info3_box_input.blur();
     });
     
     
