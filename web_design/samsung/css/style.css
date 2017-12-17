@@ -109,6 +109,13 @@ header{
     height: 100%;
 }
 
+.hamburger>a:hover .h_x_mark_k{
+    display: none;
+}
+
+.hamburger>a:hover .h_x_mark_b{
+    display: block;
+}
 
 #hamburger{
     z-index: 500;
@@ -232,7 +239,9 @@ header{
 
 
 
-
+.h_menu>li>a:hover{
+    color: #1428a0;
+}
 
 .h_menu>li>span{
      position: absolute;
@@ -242,6 +251,11 @@ header{
     height: 100%;
     width: 100%;
     padding-left: 25px;
+}
+
+.h_menu>li>span:hover{
+    color: #1428a0;
+    cursor: pointer;
 }
 
 .h_menu>li>a>.next_icon{
@@ -278,6 +292,12 @@ header{
 }
 
 
+.h_menu_sub>li>a:hover{
+    color: #1428a0;
+}
+
+
+
 .h_menu_sub_sub{
     background-color: #fff;
 }
@@ -293,7 +313,10 @@ header{
     
 }
 
-
+.h_menu_sub_sub>li>a:hover{
+    color: #1428a0;
+    text-decoration: underline;
+}
 
 .header {
     width: 1440px;
@@ -486,6 +509,9 @@ header{
 
 #x_mark>a{
     background: black;
+}
+#x_mark>a:hover{
+    background: #1428a0;
 }
 
 

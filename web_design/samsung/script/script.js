@@ -255,42 +255,7 @@ $(function(){
     /*---------------------------------------------------*/
     
     
-   $(".hamburger>a").on("mouseover",function(){
-      $(".h_x_mark_k").css("display","none");
-       $(".h_x_mark_b").css("display","block");
-   });
- 
-    $(".h_menu>li>a").hover(function(){
-        $(this).css("color","#1428a0");
-    },function(){
-         $(this).css("color","inherit");
-    });
-    
-    $(".h_menu>li>span").hover(function(){
-        $(this).css({"color":"#1428a0","cursor":"pointer"});
-    }, function(){
-        $(this).css("color","inherit");
-    });
-    
-    $(".h_menu_sub>li>a").hover(function(){
-        $(this).css("color","#1428a0");
-    },function(){
-         $(this).css("color","inherit");
-    });
-    
-    $(".h_menu_sub_sub>li>a").hover(function(){
-        $(this).css({"color":"#1428a0","text-decoration":"underline"});
-    },function(){
-         $(this).css({"color":"inherit","text-decoration":"none"});
-    });
-    
-    $("#x_mark>a").hover(function(){
-        $(this).css("background","#1428a0");
-    },function(){
-         $(this).css("background","inherit");
-    });
-    
-
+   
     
 });
 
