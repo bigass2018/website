@@ -133,8 +133,8 @@ header{
 
 .hamburger>a{
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 120%;
+    height: 120%;
     border-radius: 3px;
 }
 
@@ -618,10 +618,13 @@ font-size: 1.2em;
 }
 
 .info3>a{
-    width: 23px;
+    width: 25%;
     height: 100%;
     display: block;
     position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid red;
 }
 
 .info3>a:hover .mglass_k{
