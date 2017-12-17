@@ -189,6 +189,21 @@ $(function(){
         /*-----------마우스 올림---------*/
     
     
+    
+    $(".h_menu>li>a").on("click",function(){
+        $(this).css("display","none");
+       $(this).parent().siblings().css("display","none");
+        $(this).siblings().css("display","block");
+        
+        $(this).siblings().eq(0).children().eq(0).on("click",function(){
+           $(this).parent().css("display","none");
+         $(this).parent().siblings().css("display","block");
+         $(".h_menu>li").css("display","block");
+        });
+    });
+    
+    
+    
      /*------------------스크롤---------------------*/
     var id_scroll_btn=$("#scroll_btn");
     
