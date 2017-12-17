@@ -255,7 +255,6 @@ header{
 
 .h_menu>li>span:hover{
     color: #1428a0;
-    cursor: pointer;
 }
 
 .h_menu>li>a>.next_icon{
