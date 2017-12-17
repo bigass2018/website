@@ -196,7 +196,7 @@ $(function(){
     
     
     
-    $(".h_menu>li>a").on("click",function(){
+    $(".h_menu>li>a").on("click touchend",function(){
         $(this).css("display","none");
        $(this).parent().siblings().css("display","none");
         $(this).siblings().css("display","block");
